@@ -4,12 +4,13 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: './', // Ensures assets load cleanly on GitHub Pages (e.g. /yds/) and any subpath
   plugins: [
     react(),
     tailwindcss(),
   ],
   server: {
-    host: true, // Listen on all network interfaces for mobile testing
+    host: true,
     port: 5173,
   },
 })
